@@ -28,9 +28,10 @@
         android:layout_height="wrap_content"
         android:hint="Your Email ID."/>
     <Button
+        android:id="@+id/goahead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
         android:text="Go Ahead"
-        android:background="@drawable/round_corners"/>
+        android:background="@drawable/button_selector"/>
 </LinearLayout>
