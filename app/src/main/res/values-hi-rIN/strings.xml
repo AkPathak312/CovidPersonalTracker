@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" "</string>
+    <string name="home">नमस्ते</string>
+    <string name="nearby">पास</string>
+    <string name="profile">"प्रोफ़ाइल"</string>
+    <string name="open">" "</string>
+    <string name="close">" "</string>
+    <string name="homefragment">"घर का टुकड़ा "</string>
+    <string name="nearbyfragment">"आस-पास का टुकड़ा "</string>
+    <string name="profilefragment">प्रोफ़ाइल</string>
+    <string name="logout">"लॉग आउट "</string>
+    <string name="settings">समायोजन</string>
+    <string name="changelang">"भाषा बदलें "</string>
+    <string name="nightmode">रात का मोड</string>
+</resources>

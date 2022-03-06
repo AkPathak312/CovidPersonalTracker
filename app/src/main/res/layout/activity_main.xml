@@ -15,6 +15,7 @@
         android:layout_margin="5sp"
         android:src="@drawable/ic_baseline_all_inclusive_24"/>
     <EditText
+        android:padding="15sp"
         android:background="@drawable/round_corners"
         android:layout_margin="10sp"
         android:layout_width="match_parent"
@@ -22,11 +23,29 @@
         android:hint="Tell us your name"/>
 
     <EditText
+        android:padding="15sp"
         android:background="@drawable/round_corners"
         android:layout_margin="10sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Your Email ID."/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected Language"
+        android:layout_margin="10sp"
+        android:paddingStart="5sp"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9800"
+        android:textOn="Hindi"
+        android:textOff="English"
+        android:layout_marginEnd="10sp"
+        android:layout_marginStart="10sp"/>
     <Button
         android:id="@+id/goahead"
         android:layout_width="match_parent"

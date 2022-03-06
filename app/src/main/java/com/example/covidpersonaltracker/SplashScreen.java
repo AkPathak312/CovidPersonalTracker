@@ -16,10 +16,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         motionLayout=findViewById(R.id.motion_layout);
-        Window window=this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.status_bar));
         motionLayout.setTransitionListener(new MotionLayout.TransitionListener() {
             @Override
             public void onTransitionStarted(MotionLayout motionLayout, int startId, int endId) {

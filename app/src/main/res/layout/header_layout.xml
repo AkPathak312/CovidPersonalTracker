@@ -4,8 +4,10 @@
     android:background="#FF9800"
     android:layout_width="match_parent"
     android:gravity="center"
+    android:paddingTop="20sp"
     android:layout_height="150sp">
     <ImageView
+        android:id="@+id/header_image_view"
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:src="@drawable/ic_baseline_all_inclusive_24"
