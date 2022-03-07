@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +23,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Locale;
+
 public class HomeActivity extends AppCompatActivity {
 
     ActivityHomeBinding binding;
@@ -33,6 +37,8 @@ public class HomeActivity extends AppCompatActivity {
         //View Binding
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
 
         //Making Toolbar as Action Bar
         setSupportActionBar(binding.toolbar);
@@ -90,6 +96,7 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(this, "Header Image Clicked", Toast.LENGTH_SHORT).show();
         });
 
+        Toast.makeText(this, Utils.getSharedPreferences(this,"Settings","name"), Toast.LENGTH_SHORT).show();
     }
 
     private void callFragment(Fragment fragment) {
@@ -98,5 +105,7 @@ public class HomeActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, fragment);
         transaction.commit();
     }
+
+
 
 }

@@ -19,6 +19,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     Activity activity;
+    String language="en";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,15 @@ public class MainActivity extends AppCompatActivity {
 //        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //        window.setStatusBarColor(this.getResources().getColor(R.color.status_bar));
         activity=this;
+
+        //Saving user to Sharepreference
         binding.goahead.setOnClickListener(item->{
+            if(binding.edtEmail.getText()!=null&&binding.edtName.getText()!=null){
+                Utils.saveSharedPreference(activity,"Settings","name",binding.edtName.getText().toString());
+                Utils.saveSharedPreference(activity,"Settings","email",binding.edtEmail.getText().toString());
+                Utils.saveSharedPreference(activity,"Settings","lang",language);
+                Utils.saveSharedPreference(activity,"Settings","loggedIn","1");
+            }
             Intent i=new Intent(MainActivity.this,HomeActivity.class);
             startActivity(i);
             finish();
@@ -42,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if(isChecked){
-                    //Showing Hindi
+                    language="hi";
                     setLanguage(activity,"hi");
                 }else{
-                    //Show English
+                    language="en";
                     setLanguage(activity,"en");
                 }
             }

@@ -15,6 +15,7 @@
         android:layout_margin="5sp"
         android:src="@drawable/ic_baseline_all_inclusive_24"/>
     <EditText
+        android:id="@+id/edtName"
         android:padding="15sp"
         android:background="@drawable/round_corners"
         android:layout_margin="10sp"
@@ -23,6 +24,7 @@
         android:hint="Tell us your name"/>
 
     <EditText
+        android:id="@+id/edtEmail"
         android:padding="15sp"
         android:background="@drawable/round_corners"
         android:layout_margin="10sp"
@@ -51,6 +53,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
-        android:text="Go Ahead"
+        android:text="Register"
         android:background="@drawable/button_selector"/>
 </LinearLayout>
