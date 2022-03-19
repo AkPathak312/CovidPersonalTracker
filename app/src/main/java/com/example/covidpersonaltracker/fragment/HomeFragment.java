@@ -9,30 +9,42 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import com.example.covidpersonaltracker.BottomSheet;
+import com.example.covidpersonaltracker.CovidDataModel;
+import com.example.covidpersonaltracker.CustomListViewAdapter;
 import com.example.covidpersonaltracker.DBHelper;
 import com.example.covidpersonaltracker.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
 
 
 public class HomeFragment extends Fragment {
     DBHelper db;
-
+    ListView listView;
+    CustomListViewAdapter customListViewAdapter;
+    FloatingActionButton add;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db=new DBHelper(getContext());
-//        boolean flag=db.insertData("101 F","2022/01/02","NA");
-//        Log.d("FLAG : ",flag+"");
-//        flag=db.insertData("99 F","2022/11/02","NA");
-//        Log.d("FLAG : ",flag+"");
-//        flag=db.insertData("102 F","2022/01/22","NA");
-//        Log.d("FLAG : ",flag+"");
+        customListViewAdapter=new CustomListViewAdapter(getActivity(),db.fetchData());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View fragmentView=inflater.inflate(R.layout.fragment_home, container, false);
+        listView=fragmentView.findViewById(R.id.list_view);
+        add=fragmentView.findViewById(R.id.addTemp);
+        add.setOnClickListener(v->{
+            BottomSheet bottomSheet=new BottomSheet();
+            bottomSheet.show(getParentFragmentManager(),"BottomSheet");
+        });
+        listView.setAdapter(customListViewAdapter);
+        return fragmentView;
     }
 }

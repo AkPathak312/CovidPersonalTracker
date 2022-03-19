@@ -1,6 +1,7 @@
 package com.example.covidpersonaltracker;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,8 +9,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -105,7 +108,5 @@ public class HomeActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, fragment);
         transaction.commit();
     }
-
-
 
 }

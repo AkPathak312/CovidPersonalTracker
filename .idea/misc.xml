@@ -9,10 +9,12 @@
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
-        <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/fragment_home.xml" value="0.19709277469003847" />
+        <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/bottom_sheet.xml" value="0.20863616930312098" />
+        <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/fragment_nearby.xml" value="0.20863616930312098" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/fragment_profile.xml" value="0.20863616930312098" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/header_layout.xml" value="0.20863616930312098" />
+        <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/listview_row.xml" value="0.20863616930312098" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/layout/night_mode_layout.xml" value="0.20863616930312098" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20863616930312098" />
         <entry key="..\:/CovidPersonalTracker/app/src/main/res/menu/side_nav_menu.xml" value="0.20863616930312098" />
