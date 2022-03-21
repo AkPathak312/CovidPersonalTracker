@@ -3,13 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:padding="10sp"
+            android:id="@+id/cardview"
+            android:layout_margin="5sp"
+            android:elevation="15sp"
+            app:cardCornerRadius="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="10sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Current Location"/>
+                <TextView
+                    android:id="@+id/txtCurrentLocation"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Current Location :"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <ListView
+            android:layout_below="@id/cardview"
             android:id="@+id/list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
